@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    android:orientation="vertical"
+    android:padding="@dimen/def_margin">
+
+    <TextView
+        android:id="@+id/sensor_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/def_half_half_margin"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/ic_generic_forward_arrow"
+        app:drawableStartCompat="@drawable/ic_generic_sensor"
+        tools:text="EC7719001" />
+
+</LinearLayout>

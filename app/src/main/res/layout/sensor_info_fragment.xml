@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/def_half_half_margin">
+
+    <ScrollView
+        android:id="@+id/info_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/info_background_container"
+        android:padding="@dimen/def_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Sensor ID: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sensor_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="AE93718A" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Battery Level: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/battery_level"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="82%" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Alarm Status: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/alarm_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="ACTIVE" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="MAC Address: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mac_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Last Discovered: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/last_discovered"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="12/08/2023" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Temperature\nSamples Count:"
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/temperature_samples_count"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="9" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Temperature\nSensor Status:"
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/temperature_sensor_status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="9" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Current Temperature: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/current_temperature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Retrieving..."
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Recorded Temperatures: "
+                    android:textColor="#001399"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recorded_temperatures"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/def_half_half_margin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/def_quad_margin"
+                    android:text="Retrieving..."
+                    android:textColor="#001399"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="24.11\n\n23.77\n\n25.77" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
