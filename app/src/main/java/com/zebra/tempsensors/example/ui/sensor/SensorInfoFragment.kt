@@ -50,19 +50,17 @@ class SensorInfoFragment : Fragment() {
         val sensorId = requireArguments().getString("discovered_sensor_id")!!
         ISelectedSensor = mActivity.getSensor(sensorId)!!
 
-        internalViewModel.currentTemperature.observe(
-            viewLifecycleOwner
-        ) { value ->
+        internalViewModel.currentTemperature.observe(viewLifecycleOwner) { value ->
             mActivity.runOnUiThread {
-                mBinder?.temperaturesContainer!!.currentTemperature.text = value.toString()
+                val content = value.contentIfNotHandled ?: return@runOnUiThread
+                mBinder?.temperaturesContainer!!.currentTemperature.text = content.toString()
             }
         }
 
-        internalViewModel.recordedTemperatures.observe(
-            viewLifecycleOwner
-        ) { value ->
+        internalViewModel.recordedTemperatures.observe(viewLifecycleOwner) { value ->
             mActivity.runOnUiThread {
-                mBinder?.temperaturesContainer!!.recordedTemperatures.text = value.toString()
+                val content = value.contentIfNotHandled ?: return@runOnUiThread
+                mBinder?.temperaturesContainer!!.recordedTemperatures.text = content
             }
         }
 

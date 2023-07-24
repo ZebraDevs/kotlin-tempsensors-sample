@@ -13,32 +13,40 @@ class InternalViewModel : ViewModel() {
     val sensorDiscoveredResponse: MutableLiveData<Event<List<String>>> = MutableLiveData()
     val sensorsScanStartEvent: MutableLiveData<Boolean> = MutableLiveData()
 
-    val recordedTemperatures: MutableLiveData<String> by lazy {
-        MutableLiveData<String>()
+    val recordedTemperatures: MutableLiveData<Event<String>> by lazy {
+        MutableLiveData<Event<String>>()
     }
-    val currentTemperature: MutableLiveData<Float> by lazy {
-        MutableLiveData<Float>()
+    val currentTemperature: MutableLiveData<Event<Float>> by lazy {
+        MutableLiveData<Event<Float>>()
     }
 
     fun getCurrentTemperatureForSensor(sensor: IZebraSensor) {
         viewModelScope.launch(Dispatchers.IO) {
-            currentTemperature.postValue(sensor.readTemperature())
+            try {
+                currentTemperature.postValue(Event(sensor.readTemperature()))
+            } catch (ex: Exception) {
+                currentTemperature.postValue(Event(Float.MIN_VALUE))
+            }
         }
     }
 
     fun getRecordedTemperaturesForSensor(sensor: IZebraSensor) {
         viewModelScope.launch(Dispatchers.IO) {
-            val recordedTemperaturesArray = sensor.readTemperatureSamples()
             var recordedTemperaturesTxt = ""
+            try {
+                val recordedTemperaturesArray = sensor.readTemperatureSamples()
 
-            if (recordedTemperaturesArray.isEmpty()) {
-                recordedTemperaturesTxt = "0"
-            } else {
-                recordedTemperaturesArray.forEach {
-                    recordedTemperaturesTxt = recordedTemperaturesTxt + it.toString() + "\n\n"
+                if (recordedTemperaturesArray.isEmpty()) {
+                    recordedTemperaturesTxt = "0"
+                } else {
+                    recordedTemperaturesArray.forEach {
+                        recordedTemperaturesTxt = recordedTemperaturesTxt + it.toString() + "\n\n"
+                    }
                 }
+            } catch (ex: Exception) {
+                recordedTemperaturesTxt = "0"
             }
-            recordedTemperatures.postValue(recordedTemperaturesTxt)
+            recordedTemperatures.postValue(Event(recordedTemperaturesTxt))
         }
     }
 }
