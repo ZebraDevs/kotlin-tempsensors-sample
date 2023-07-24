@@ -54,7 +54,7 @@ class SensorInfoFragment : Fragment() {
             viewLifecycleOwner
         ) { value ->
             mActivity.runOnUiThread {
-                mBinder?.currentTemperature!!.text = value.toString()
+                mBinder?.temperaturesContainer!!.currentTemperature.text = value.toString()
             }
         }
 
@@ -62,7 +62,7 @@ class SensorInfoFragment : Fragment() {
             viewLifecycleOwner
         ) { value ->
             mActivity.runOnUiThread {
-                mBinder?.recordedTemperatures!!.text = value.toString()
+                mBinder?.temperaturesContainer!!.recordedTemperatures.text = value.toString()
             }
         }
 
@@ -78,17 +78,22 @@ class SensorInfoFragment : Fragment() {
     }
 
     private fun fillUI() {
-        mBinder?.sensorId!!.text = ISelectedSensor.id
-        mBinder?.batteryLevel!!.text = """${ISelectedSensor.batteryLevel}%"""
-        mBinder?.alarmStatus!!.text = if (ISelectedSensor.alarmStatus.absoluteValue == 0) {
-            "INACTIVE"
-        } else {
-            "ACTIVE"
-        }
-        mBinder?.macAddress!!.text = ISelectedSensor.macAddress
-        mBinder?.lastDiscovered!!.text = ISelectedSensor.lastDiscovered
-        mBinder?.temperatureSensorStatus!!.text = ISelectedSensor.temperatureSensorStatus.toString()
-        mBinder?.temperatureSamplesCount!!.text = ISelectedSensor.temperatureSamplesCount.toString()
+        mBinder?.infoContainer!!.sensorId.text = ISelectedSensor.id
+        mBinder?.infoContainer!!.batteryLevel.text = """${ISelectedSensor.batteryLevel}%"""
+        mBinder?.infoContainer!!.alarmStatus.text =
+            if (ISelectedSensor.alarmStatus.absoluteValue == 0) {
+                "INACTIVE"
+            } else {
+                "ACTIVE"
+            }
+        mBinder?.infoContainer!!.macAddress.text = ISelectedSensor.macAddress
+        mBinder?.infoContainer!!.lastDiscovered.text = ISelectedSensor.lastDiscovered
+
+        mBinder?.temperaturesContainer!!.mainContainer.visibility = View.VISIBLE
+        mBinder?.temperaturesContainer!!.temperatureSensorStatus.text =
+            ISelectedSensor.temperatureSensorStatus.toString()
+        mBinder?.temperaturesContainer!!.temperatureSamplesCount.text =
+            ISelectedSensor.temperatureSamplesCount.toString()
 
         internalViewModel.getCurrentTemperatureForSensor(ISelectedSensor)
         internalViewModel.getRecordedTemperaturesForSensor(ISelectedSensor)

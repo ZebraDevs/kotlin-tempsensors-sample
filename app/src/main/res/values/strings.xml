@@ -9,4 +9,19 @@
 
     <string name="sensors_generic_empty_label">Sensors will appear here as they get discovered</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Sensor Detail -->
+    <string name="sensor_detail_name">Name:</string>
+    <string name="sensor_detail_model">Model:</string>
+    <string name="sensor_detail_id">ID:</string>
+    <string name="sensor_detail_serial_number">Serial Number:</string>
+    <string name="sensor_detail_battery_level">Battery Level:</string>
+    <string name="sensor_detail_alarm_status">Alarm Status:</string>
+    <string name="sensor_detail_mac_address">MAC Address:</string>
+    <string name="sensor_detail_last_discovered">Last Discovered:</string>
+
+    <string name="sensor_detail_temperature_samples_count">Temperature\nSamples Count:</string>
+    <string name="sensor_detail_temperature_sensor_status">Temperature\nSensor Status:</string>
+    <string name="sensor_detail_temperature_current">Current Temperature:</string>
+    <string name="sensor_detail_temperature_recorded">Recorded Temperatures:</string>
 </resources>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/generic_row_background"
+    android:orientation="vertical"
+    android:padding="@dimen/def_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_name"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sensor_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="ZS300_AE93718A" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_model"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sensor_model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="ZS300" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_id"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sensor_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="AE93718A" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_serial_number"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sensor_sn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="AE93718A" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_battery_level"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/battery_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="82%" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_alarm_status"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/alarm_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="ACTIVE" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_mac_address"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mac_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:text="@string/sensor_detail_last_discovered"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/last_discovered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/def_half_half_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/def_quad_margin"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="12/08/2023" />
+
+    </LinearLayout>
+
+</LinearLayout>
