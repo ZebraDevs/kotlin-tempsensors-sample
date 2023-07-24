@@ -50,24 +50,30 @@ class ScanningFragment : Fragment() {
         mActivity = requireActivity() as MainActivity
         setUpAdapter()
 
-        internalViewModel.sensorDiscoveredResponse.observe(viewLifecycleOwner,
-            object : Observer<Event<String>> {
-                override fun onChanged(discoveredSensorId: Event<String>) {
-                    val sensorId = discoveredSensorId.contentIfNotHandled
+        internalViewModel.sensorsScanStartEvent.observe(
+            viewLifecycleOwner
+        ) { scanState ->
+            mActivity.runOnUiThread {
+                mBinder?.refreshContainer!!.isRefreshing = scanState
+            }
+        }
 
-                    if (sensorId.isNullOrEmpty()) {
+        internalViewModel.sensorDiscoveredResponse.observe(viewLifecycleOwner,
+            object : Observer<Event<List<String>>> {
+                override fun onChanged(discoveredSensorId: Event<List<String>>) {
+                    val discoveredSensorsIds = discoveredSensorId.contentIfNotHandled
+
+                    if (discoveredSensorsIds.isNullOrEmpty()) {
                         return
                     }
 
-                    scannedSensorsAdapter.notifyAdapter(sensorId)
+                    scannedSensorsAdapter.notifyAdapter(discoveredSensorsIds)
                     mBinder?.emptyListPlaceholder!!.visibility = View.GONE
                 }
             })
 
-        with(mBinder?.root!!) {
+        with(mBinder?.refreshContainer!!) {
             setOnRefreshListener {
-//                val discoveredSensors = mActivity.getCurrentDiscoveredSensors()
-//                scannedSensorsAdapter.notifyAdapter(discoveredSensors)
                 isRefreshing = false
             }
         }

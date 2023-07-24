@@ -48,8 +48,8 @@ class ScannedSensorsAdapter(
         return mScannedSensorsIds.size
     }
 
-    fun notifyAdapter(items: MutableList<String>) {
-        mScannedSensorsIds = items
+    fun notifyAdapter(items: List<String>) {
+        mScannedSensorsIds = items.toMutableList()
         notifyDataSetChanged()
     }
 

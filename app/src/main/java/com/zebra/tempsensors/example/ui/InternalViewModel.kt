@@ -10,7 +10,8 @@ import kotlinx.coroutines.launch
 
 class InternalViewModel : ViewModel() {
 
-    val sensorDiscoveredResponse: MutableLiveData<Event<String>> = MutableLiveData()
+    val sensorDiscoveredResponse: MutableLiveData<Event<List<String>>> = MutableLiveData()
+    val sensorsScanStartEvent: MutableLiveData<Boolean> = MutableLiveData()
 
     val recordedTemperatures: MutableLiveData<String> by lazy {
         MutableLiveData<String>()

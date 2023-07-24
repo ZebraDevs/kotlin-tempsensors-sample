@@ -119,6 +119,8 @@ class MainActivity : AppCompatActivity() {
                 ).show()
                 mIsDiscoveryActive = true
                 mIsDiscoveryFinished = false
+
+                internalParcelViewModel.sensorsScanStartEvent.value = mIsDiscoveryActive
             }
 
             if (intent.action == IZebraSensorService.ACTION_DISCOVERY_FINISHED) {
@@ -129,12 +131,11 @@ class MainActivity : AppCompatActivity() {
                 ).show()
                 mIsDiscoveryActive = false
                 mIsDiscoveryFinished = true
-            }
 
-            if (intent.action == IZebraSensorService.ACTION_DISCOVERY_FOUND_SENSOR) {
-                val sensorId =
-                    intent.extras!!.getString(IZebraSensorService.EXTRA_DISCOVERED_SENSOR_ID)!!
-                internalParcelViewModel.sensorDiscoveredResponse.value = Event(sensorId)
+                val discoveredSensors = mZebraSensorService?.lastScanDevices!!
+
+                internalParcelViewModel.sensorDiscoveredResponse.value = Event(discoveredSensors)
+                internalParcelViewModel.sensorsScanStartEvent.value = mIsDiscoveryActive
             }
         }
     }
